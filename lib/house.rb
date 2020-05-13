@@ -7,6 +7,7 @@ class House
     @address = address
     @rooms = []
     @details = {}
+    @room_categories = {}
   end
 
   def add_room(room)
@@ -48,6 +49,12 @@ class House
   def rooms_sorted_by_area
     @rooms.sort do |room|
       room.area
+    end
+  end
+
+  def rooms_by_category
+    @rooms.group_by do |room|
+      room.category
     end
   end
 
