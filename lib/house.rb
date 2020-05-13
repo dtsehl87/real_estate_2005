@@ -41,5 +41,14 @@ class House
     @details
   end
 
+  def price_per_square_foot
+    (@price.gsub('$', '').to_f / self.area).round(2)
+  end
+
+  def rooms_sorted_by_area
+    @rooms.sort do |room|
+      room.area
+    end
+  end
 
 end
