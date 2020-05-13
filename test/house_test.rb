@@ -118,7 +118,7 @@ class HouseTest < Minitest::Test
     assert_equal [room_4, room_3, room_2, room_1], house.rooms_sorted_by_area
   end
 
-  def test_house_can_have_rooms_by_category
+  def test_house_can_have_rooms_grouped_by_category
     house = House.new("$400000", "123 sugar lane")
     room_1 = Room.new(:bedroom, 10, '13')
     room_2 = Room.new(:bedroom, 11, '15')
